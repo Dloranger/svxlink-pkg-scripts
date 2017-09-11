@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #Set Pkg Build Version
-GH_NAME=kb3vgw
-BRANCH=1.5.99
+GH_NAME=richneese
+BRANCH=svxreflector-dev
 PKG_NAME=svxlink
 PKG_VER=1.5.99
 BUILD=12
@@ -38,8 +38,8 @@ mv *.changes debs-$PKG_NAME-$PKG_VER
 #mv *.dsc debs-$PKG_NAME-$PKG_VER
 #mv *.gz debs-$PKG_NAME-$PKG_VER
 
-#cp -rp "$WRK_DIR"/debs-$PKG_NAME-$PKG_VER/* "$REPO"/incoming || exit
+cp -rp "$WRK_DIR"/debs-$PKG_NAME-$PKG_VER/* "$REPO"/incoming || exit
 
-#cd "$REPO" || exit
-#./import-new-pkgs.sh || exit
+cd "$REPO" || exit
+./import-new-pkgs.sh || exit
 
