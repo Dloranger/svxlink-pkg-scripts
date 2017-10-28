@@ -2,11 +2,11 @@
 
 #Set Pkg Build Version
 GH_NAME=richneese
-BRANCH=svxreflector-dev
+BRANCH=15.99
 PKG_NAME=svxlink
-PKG_VER=1.5.99
-BUILD=12
-RELEASE=testing #testing/stable/devel
+PKG_VER=15.99
+BUILD=5
+RELEASE=devel #testing/stable/devel
 GIT_SRC=https://github.com/"$GH_NAME"/"$PKG_NAME".git
 REPO=/home/repo/"$PKG_NAME"/"$RELEASE"/debian
 WRK_DIR=/usr/src/"$PKG_NAME"-build
@@ -38,8 +38,8 @@ mv *.changes debs-$PKG_NAME-$PKG_VER
 #mv *.dsc debs-$PKG_NAME-$PKG_VER
 #mv *.gz debs-$PKG_NAME-$PKG_VER
 
-cp -rp "$WRK_DIR"/debs-$PKG_NAME-$PKG_VER/* "$REPO"/incoming || exit
+#cp -rp "$WRK_DIR"/debs-$PKG_NAME-$PKG_VER/* "$REPO"/incoming || exit
 
-cd "$REPO" || exit
-./import-new-pkgs.sh || exit
+#cd "$REPO" || exit
+#./import-new-pkgs.sh || exit
 
