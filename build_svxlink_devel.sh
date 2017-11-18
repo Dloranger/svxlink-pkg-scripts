@@ -2,7 +2,7 @@
 
 #Set Pkg Build Version
 GH_NAME=richneese
-BRANCH=15.99
+BRANCH=15.99-dev
 PKG_NAME=svxlink
 PKG_VER=15.99
 BUILD=5
