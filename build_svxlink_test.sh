@@ -16,7 +16,9 @@ WRK_SRC_DIR=/usr/src/"$PKG_NAME"-build/"$PKG_NAME"-"$PKG_VER"
 rm -rf $WRK_DIR
 
 #get pkg system scripts
-git clone -b $BRANCH $GIT_SRC "$WRK_SRC_DIR"/
+cd $WRK_SRC_DIR
+#doing a pull may be faster if there is already a clone on hand
+git pull || git clone -b $BRANCH $GIT_SRC "$WRK_SRC_DIR"
 
 cd $WRK_SRC_DIR || exit
 #set version in the changelog files for core
